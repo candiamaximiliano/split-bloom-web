@@ -5,32 +5,60 @@ import ThemeSwitch from "../ThemeSwitch"
 
 const navigation = {
   product: [
-    { name: "Cómo funciona", href: "#", external: false },
+    { name: "Cómo funciona", href: "#hiw-title", external: false },
     { name: "Precios", href: "/pricing", external: false },
     {
       name: "Preguntas frecuentes",
       href: "/pricing#faq-title",
       external: false,
     },
-    { name: "Changelog", href: "/changelog", external: false },
+    { name: "Quienes somos", href: "/about", external: false },
   ],
   resources: [
     { name: "Blog de Finanzas", href: "/blog", external: false },
-    { name: "Guía para dividir gastos", href: "#", external: true },
-    { name: "Soporte en WhatsApp", href: "#", external: true },
-    { name: "YouTube", href: "#", external: true },
+    {
+      name: "Guía para dividir gastos",
+      href: "/blog/guia-para-dividir-gastos",
+      external: true,
+    },
+    {
+      name: "Soporte en WhatsApp",
+      href: "https://wa.me/5491170636744",
+      external: true,
+    },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@splitbloom",
+      external: true,
+    },
   ],
   company: [
-    { name: "Quienes somos", href: "/about", external: false },
-    { name: "Trabajá con nosotros", href: "#", external: true },
-    { name: "Contacto", href: "#", external: false },
-    { name: "Estado del sistema", href: "#", external: false },
+    {
+      name: "Feedback",
+      href: "https://splitbloom.featurebase.app/en",
+      external: true,
+    },
+    {
+      name: "Roadmap",
+      href: "https://splitbloom.featurebase.app/en/roadmap",
+      external: true,
+    },
+    {
+      name: "Changelog",
+      href: "https://splitbloom.featurebase.app/en/changelog",
+      external: true,
+    },
+    {
+      name: "Centro de ayuda",
+      href: "https://splitbloom.featurebase.app/en/help",
+      external: true,
+    },
   ],
   legal: [
-    { name: "Términos y Condiciones", href: "#", external: false },
-    { name: "Política de Privacidad", href: "#", external: false },
-    { name: "Seguridad y Datos", href: "#", external: false },
-    { name: "Cookies", href: "#", external: false },
+    { name: "Términos y Condiciones", href: "/terms", external: false },
+    { name: "Política de Privacidad", href: "/privacy", external: false },
+    { name: "Seguridad y Datos", href: "/security", external: false },
+    { name: "Cookies", href: "/cookies", external: false },
   ],
 }
 
@@ -55,7 +83,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-8">
               <div className="min-w-[140px]">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Product
+                  Producto
                 </h3>
                 <ul
                   role="list"
@@ -86,7 +114,7 @@ export default function Footer() {
               </div>
               <div className="min-w-[140px]">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Resources
+                  Recursos
                 </h3>
                 <ul
                   role="list"
@@ -119,7 +147,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-8">
               <div className="min-w-[140px]">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Company
+                  Empresa
                 </h3>
                 <ul
                   role="list"
@@ -150,7 +178,7 @@ export default function Footer() {
               </div>
               <div className="min-w-[140px]">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Legal
+                  Legales
                 </h3>
                 <ul
                   role="list"
