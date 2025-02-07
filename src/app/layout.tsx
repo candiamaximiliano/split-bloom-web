@@ -16,7 +16,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://splitbloom.com"),
   title: siteConfig.name,
   description: siteConfig.description,
-  keywords: ["Marketing", "Database", "Software"],
+  keywords: [
+    "Gastos compartidos",
+    "División de gastos",
+    "Control de gastos",
+    "Finanzas personales",
+    "App de finanzas",
+    "Gestión de dinero",
+    "Split gastos",
+    "Dividir cuentas",
+    "Administración financiera",
+    "Ahorro",
+    "Presupuesto personal",
+    "Gastos grupales",
+  ],
   authors: [
     {
       name: "Store Max",
@@ -24,6 +37,20 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Store Max",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
   openGraph: {
     type: "website",
     locale: "es_AR",
@@ -31,12 +58,21 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.description,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     creator: "@storemax",
+    images: [siteConfig.ogImage],
   },
   icons: {
     icon: [
