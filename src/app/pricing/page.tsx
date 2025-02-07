@@ -39,53 +39,57 @@ interface Plan {
 
 const plans: Plan[] = [
   {
-    name: "Starter",
+    name: "Básico",
     price: "$0",
-    description:
-      "For individuals and freelancers that need a scalable database.",
-    capacity: ["Up to 5 users, 1 admin", "1 workspace"],
+    description: "Ideal para empezar a gestionar tus finanzas sin costo.",
+    capacity: ["Gestión básica de gastos"],
     features: [
-      "Up to 1000/req. per day",
-      "5 GB max storage",
-      "Community Slack Support",
+      "Soporte de divisas, división simple y cálculos automáticos",
+      "Hasta 1 grupo",
+      "Exportación de datos en CSV y PDF",
+      "Recordatorios, modo offline con sincronización y dashboard intuitivo",
+      "Búsqueda avanzada y Split Bloom Assistant (10 tokens).",
+      "Totalmente gratis, sin anuncios.",
     ],
     isStarter: true,
     isRecommended: false,
-    buttonText: "Get started",
+    buttonText: "Comienza Gratis",
     buttonLink: "#",
   },
   {
-    name: "Teams",
-    price: { monthly: "$49", annually: "$39" },
-    description: "For small teams and start-ups that need a scalable database.",
-    capacity: ["Up to 100 users, 3 admins", "Up to 20 workspaces"],
-    features: [
-      "Unlimited requests",
-      "$0.07 per processed GB",
-      "$0.34 per stored GB",
-      "Slack Connect",
-    ],
-    isStarter: false,
-    isRecommended: false,
-    buttonText: "Start 14-day trial",
-    buttonLink: "#",
-  },
-  {
-    name: "Business",
-    price: { monthly: "$99", annually: "$79" },
+    name: "PRO",
+    price: { monthly: "$4.99", annually: "$2.49" },
     description:
-      "For larger teams that need more advanced controls and features.",
-    capacity: ["Up to 500 users, 10 admins", "Unlimited workspaces"],
+      "Potenciá tu control financiero con herramientas avanzadas y soporte prioritario.",
+    capacity: ["Presupuestos ilimitados y gestión colaborativa"],
     features: [
-      "Unlimited requests",
-      "Volume discount",
-      "$0.03 per processed GB",
-      "$0.1 per stored GB",
-      "Single Sign-On (SSO)",
+      "Incluye funciones del plan Básico",
+      "Hasta 5 grupos",
+      "Automatización de registros, alertas y gráficos interactivos",
+      "Split Bloom Assistant (200 tokens)",
+      "Soporte prioritario vía email",
     ],
     isStarter: false,
     isRecommended: true,
-    buttonText: "Start 14-day trial",
+    buttonText: "Prueba 14 días Gratis",
+    buttonLink: "#",
+  },
+  {
+    name: "PRO+",
+    price: { monthly: "$9.99", annually: "$4.99" },
+    description:
+      "La solución integral para usuarios avanzados con asesoría premium y herramientas exclusivas.",
+    capacity: ["Planificación financiera completa"],
+    features: [
+      "Incluye funciones del plan PRO",
+      "Hasta 10 grupos",
+      "Dashboard de gastos con tarjetas de crédito",
+      "Split Bloom Assistant (1000 tokens)",
+      "Soporte VIP 24/7 por email, WhatsApp y videoconferencias",
+    ],
+    isStarter: false,
+    isRecommended: false,
+    buttonText: "Prueba 14 días Gratis",
     buttonLink: "#",
   },
 ]
@@ -108,57 +112,69 @@ const sections: Section[] = [
       {
         name: "Email notifications & webhooks",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Starter: true, Teams: true, Business: true },
+          "Recibe notificaciones en tiempo real vía email y webhooks para mantenerte informado sobre cada actualización en tus gastos.",
+        plans: { Básico: true, PRO: true, "PRO+": true },
       },
       {
-        name: "Workspaces",
+        name: "Grupos Colaborativos",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Starter: "5", Teams: "10", Business: "Unlimited" },
-      },
-      {
-        name: "Storage",
-        tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
+          "Crea y administra grupos para dividir gastos con amigos, familiares o colegas.",
         plans: {
-          Starter: "$0.65 per stored GB",
-          Teams: "$0.34 per stored GB",
-          Business: "Customized¹",
+          Básico: "Hasta 1 grupo",
+          PRO: "Hasta 5 grupos",
+          "PRO+": "Hasta 10 grupos",
         },
       },
       {
-        name: "Seats",
+        name: "Exportación de Datos",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
+          "Exporta tus transacciones y reportes financieros en formatos CSV y PDF.",
         plans: {
-          Starter: "5 users",
-          Teams: "Up to 20 users",
-          Business: "Unlimited",
+          Básico: "Hasta 3 exportaciones/mes",
+          PRO: "Exportaciones ilimitadas",
+          "PRO+": "Exportaciones ilimitadas + informes personalizados",
+        },
+      },
+      {
+        name: "Usuarios en Grupo",
+        tooltip:
+          "Colabora con amigos y familiares en la gestión de tus finanzas compartidas.",
+        plans: {
+          Básico: "Hasta 5 usuarios",
+          PRO: "Hasta 20 usuarios",
+          "PRO+": "Ilimitado",
         },
       },
     ],
   },
   {
-    name: "Automation",
+    name: "Automatización",
     features: [
       {
-        name: "Service accounts",
+        name: "Asistente Virtual",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Starter: true, Teams: true, Business: true },
+          "Utiliza nuestro asistente virtual para registrar gastos, escanear recibos y recibir recomendaciones inteligentes.",
+        plans: {
+          Básico: "Básico (10 tokens/mes)",
+          PRO: "Avanzado (200 tokens/mes)",
+          "PRO+": "Premium (tokens ilimitados)",
+        },
       },
       {
-        name: "Admin API",
+        name: "Importación Automática",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Teams: true, Business: true },
+          "Importa transacciones y escanea recibos de forma automatizada para mantener tu registro actualizado.",
+        plans: {
+          Básico: "Limitado",
+          PRO: "Estándar",
+          "PRO+": "Avanzado",
+        },
       },
       {
-        name: "No-Code workflow builder",
+        name: "Integración Bancaria",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Starter: "Limited", Teams: "Standard", Business: "Enhanced" },
+          "Conecta tus cuentas bancarias para sincronización en tiempo real y una automatización total de tus registros.",
+        plans: { Básico: false, PRO: true, "PRO+": true },
       },
     ],
   },
@@ -166,39 +182,57 @@ const sections: Section[] = [
     name: "Analytics",
     features: [
       {
-        name: "Analytics retention",
+        name: "Historial y Retención de Datos",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Starter: "7 days", Teams: "1 year", Business: "Unlimited" },
+          "Accede al historial completo de tus transacciones y conserva la información por períodos definidos.",
+        plans: { Básico: "90 días", PRO: "1 año", "PRO+": "Ilimitado" },
       },
       {
-        name: "Anomaly detection",
+        name: "Reportes y Gráficos",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Teams: true, Business: true },
+          "Visualiza tus datos financieros mediante reportes personalizados y gráficos interactivos.",
+        plans: {
+          Básico: "Básico",
+          PRO: "Detallado",
+          "PRO+": "Avanzado y personalizado",
+        },
       },
       {
-        name: "Custom report builder",
+        name: "Detección de Anomalías",
         tooltip:
-          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
-        plans: { Business: true },
+          "Recibe alertas cuando se detecten patrones inusuales en tus gastos.",
+        plans: { Básico: false, PRO: true, "PRO+": true },
+      },
+      {
+        name: "Simulación de Escenarios",
+        tooltip:
+          "Proyecta y analiza tu futuro financiero con herramientas predictivas y simulaciones personalizadas.",
+        plans: { Básico: false, PRO: "Limitado", "PRO+": true },
       },
     ],
   },
   {
-    name: "Support",
+    name: "Soporte",
     features: [
       {
-        name: "Slack",
+        name: "Soporte Multicanal",
+        tooltip:
+          "Obtén asistencia a través de correo, chat en vivo y WhatsApp, de acuerdo al nivel de tu plan.",
         plans: {
-          Starter: "Community",
-          Teams: "Connect",
-          Business: "Dedicated agent",
+          Básico: "Correo (2-4 días)",
+          PRO: "Chat (1-2 días)",
+          "PRO+": "Soporte VIP 24/7",
         },
       },
       {
-        name: "Email",
-        plans: { Starter: "2-4 days", Teams: "1-2 days", Business: "Priority" },
+        name: "Comunidad y Recursos",
+        tooltip:
+          "Accede a foros, tutoriales, webinars y asesoría personalizada para potenciar tu experiencia.",
+        plans: {
+          Básico: "Comunidad",
+          PRO: "Tutoriales y foros",
+          "PRO+": "Webinars y asesoría personalizada",
+        },
       },
     ],
   },
@@ -224,14 +258,13 @@ export default function Pricing() {
           animationFillMode: "backwards",
         }}
       >
-        <Badge>Pricing</Badge>
+        <Badge>Precios</Badge>
         <h1 className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
-          Our plans scale with you
+          Planes que se adaptan a vos
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
-          Plans that empower you and your team to ship without friction. Our
-          flexible pricing models ensure that efficiency doesn&rsquo;t come at
-          the cost of your budget.
+          ¿Listo para dejar de enredarte con tus finanzas? Elegí el plan que
+          mejor se adapte a tu estilo de vida y cuidá tu plata, viví sin drama.
         </p>
       </section>
       <section
@@ -249,7 +282,7 @@ export default function Pricing() {
             htmlFor="switch"
             className="text-base font-medium sm:text-sm dark:text-gray-400"
           >
-            Monthly
+            Mensual
           </Label>
           <Switch
             id="switch"
@@ -264,7 +297,7 @@ export default function Pricing() {
             htmlFor="switch"
             className="text-base font-medium sm:text-sm dark:text-gray-400"
           >
-            Yearly (-20%)
+            Anual (-20%)
           </Label>
         </div>
         <div className="grid grid-cols-1 gap-x-14 gap-y-8 lg:grid-cols-3">
@@ -277,11 +310,11 @@ export default function Pricing() {
                       className="absolute inset-0 flex items-center"
                       aria-hidden="true"
                     >
-                      <div className="w-full border-t border-indigo-600 dark:border-indigo-400" />
+                      <div className="w-full border-t border-green-600 dark:border-green-400" />
                     </div>
                     <div className="relative flex justify-center">
-                      <span className="bg-white px-3 text-xs font-medium text-indigo-600 dark:bg-gray-950 dark:text-indigo-400">
-                        Most popular
+                      <span className="bg-white px-3 text-xs font-medium text-green-600 dark:bg-gray-950 dark:text-green-400">
+                        Más popular
                       </span>
                     </div>
                   </div>
@@ -364,7 +397,7 @@ export default function Pricing() {
                       className="flex items-center gap-x-3 py-1.5"
                     >
                       <RiCheckLine
-                        className="size-4 shrink-0 text-indigo-600 dark:text-indigo-400"
+                        className="size-4 shrink-0 text-green-600 dark:text-green-400"
                         aria-hidden="true"
                       />
                       <span>{feature}</span>
@@ -429,7 +462,7 @@ export default function Pricing() {
                             className="flex gap-x-3 py-2.5"
                           >
                             <RiCheckLine
-                              className="size-5 flex-none text-indigo-600 dark:text-indigo-400"
+                              className="size-5 flex-none text-green-600 dark:text-green-400"
                               aria-hidden="true"
                             />
                             <span>
@@ -487,7 +520,7 @@ export default function Pricing() {
                       <div
                         className={cx(
                           !plan.isStarter
-                            ? "text-indigo-600 dark:text-indigo-400"
+                            ? "text-green-600 dark:text-green-400"
                             : "text-gray-900 dark:text-gray-50",
                           "font-semibold leading-7",
                         )}
@@ -525,7 +558,7 @@ export default function Pricing() {
                     {section.features.map((feature) => (
                       <tr
                         key={feature.name}
-                        className="transition hover:bg-indigo-50/30 dark:hover:bg-indigo-800/5"
+                        className="transition hover:bg-green-50/30 dark:hover:bg-green-800/5"
                       >
                         <th
                           scope="row"
@@ -554,7 +587,7 @@ export default function Pricing() {
                               <>
                                 {feature.plans[plan.name] === true ? (
                                   <RiCheckLine
-                                    className="h-5 w-5 text-indigo-600 dark:text-indigo-400"
+                                    className="h-5 w-5 text-green-600 dark:text-green-400"
                                     aria-hidden="true"
                                   />
                                 ) : (
@@ -602,7 +635,7 @@ export default function Pricing() {
                         <Button
                           variant="light"
                           asChild
-                          className="group bg-transparent px-0 text-base text-indigo-600 hover:bg-transparent dark:bg-transparent dark:text-indigo-400 hover:dark:bg-transparent"
+                          className="group bg-transparent px-0 text-base text-green-600 hover:bg-transparent dark:bg-transparent dark:text-green-400 hover:dark:bg-transparent"
                         >
                           <Link href={plan.buttonLink}>
                             {plan.buttonText}

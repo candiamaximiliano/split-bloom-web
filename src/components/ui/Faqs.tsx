@@ -8,33 +8,29 @@ import {
 
 const faqs = [
   {
-    question:
-      "How secure is the database software in terms of protecting sensitive data?",
+    question: "¿Es realmente gratis?",
     answer:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Sí, el plan Free es gratis para siempre. Podés usar todas las funciones básicas sin costo.",
   },
   {
-    question: "Can the database be self-hosted?",
+    question: "¿Puedo usarlo en varios dispositivos?",
     answer:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Sí, tu cuenta se sincroniza en la web, Android y iOS. Podés acceder desde cualquier dispositivo.",
   },
   {
-    question:
-      "Does the software support integration with other systems and applications?",
+    question: "¿Cómo funciona el bot de WhatsApp?",
     answer:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Solo le escribís y te responde con tus datos en segundos. Podés consultar gastos, agregar nuevos o ver quién te debe plata.",
   },
   {
-    question:
-      "How easy is it to back up and restore data using the database software?",
+    question: "¿Puedo exportar mis datos?",
     answer:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Sí, podés bajar un Excel con todos tus movimientos en cualquier momento.",
   },
   {
-    question:
-      "What level of technical support and maintenance is provided for the software?",
+    question: "¿Es seguro?",
     answer:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Sí, usamos encriptación de nivel bancario para proteger todos tus datos.",
   },
 ]
 
@@ -47,14 +43,14 @@ export function Faqs() {
             id="faq-title"
             className="inline-block scroll-my-24 bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 pr-2 text-2xl font-bold tracking-tighter text-transparent lg:text-3xl dark:from-gray-50 dark:to-gray-300"
           >
-            Frequently Asked Questions
+            Preguntas Frecuentes
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-400">
             Can&rsquo;t find the answer you&rsquo;re looking for? Don&rsquo;t
             hesitate to get in touch with our{" "}
             <a
               href="#"
-              className="font-medium text-indigo-600 hover:text-indigo-300 dark:text-indigo-400"
+              className="font-medium text-green-600 hover:text-green-300 dark:text-green-400"
             >
               customer support
             </a>{" "}

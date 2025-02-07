@@ -44,7 +44,7 @@ const RadioGroupItem = React.forwardRef<
           // background color
           "bg-transparent",
           // checked
-          "group-data-[state=checked]:bg-indigo-50 group-data-[state=checked]:text-indigo-600 dark:group-data-[state=checked]:bg-indigo-500/20 dark:group-data-[state=checked]:text-indigo-300",
+          "group-data-[state=checked]:bg-green-50 group-data-[state=checked]:text-green-600 dark:group-data-[state=checked]:bg-green-500/20 dark:group-data-[state=checked]:text-green-300",
           // focus
           focusRing,
         )}

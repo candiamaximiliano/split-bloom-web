@@ -40,7 +40,7 @@ export function Navigation() {
       <div className="w-full md:my-auto">
         <div className="relative flex items-center justify-between">
           <Link href={siteConfig.baseLinks.home} aria-label="Home">
-            <span className="sr-only">Company logo</span>
+            <span className="sr-only">Split Bloom logo</span>
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
           <nav className="hidden md:absolute md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
@@ -49,27 +49,21 @@ export function Navigation() {
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
                 href={siteConfig.baseLinks.about}
               >
-                About
+                Acerca de
               </Link>
               <Link
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
                 href={siteConfig.baseLinks.pricing}
               >
-                Pricing
-              </Link>
-              <Link
-                className="px-2 py-1 text-gray-900 dark:text-gray-50"
-                href={siteConfig.baseLinks.changelog}
-              >
-                Changelog
+                Precios
               </Link>
             </div>
           </nav>
           <Button className="hidden h-10 font-semibold md:flex">
-            Book a demo
+            Iniciar sesión
           </Button>
           <div className="flex gap-x-2 md:hidden">
-            <Button>Book demo</Button>
+            <Button>Iniciar sesión</Button>
             <Button
               onClick={() => setOpen(!open)}
               variant="light"
@@ -91,10 +85,10 @@ export function Navigation() {
         >
           <ul className="space-y-4 font-medium">
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.about}>About</Link>
+              <Link href={siteConfig.baseLinks.about}>Acerca de</Link>
             </li>
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.pricing}>Pricing</Link>
+              <Link href={siteConfig.baseLinks.pricing}>Precios</Link>
             </li>
             <li onClick={() => setOpen(false)}>
               <Link href={siteConfig.baseLinks.changelog}>Changelog</Link>

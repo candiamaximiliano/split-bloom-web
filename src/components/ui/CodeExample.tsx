@@ -1,9 +1,9 @@
 import Code from "@/components/Code"
 import {
-  RiLinksLine,
-  RiPlugLine,
-  RiShieldKeyholeLine,
-  RiStackLine,
+  RiExchangeDollarLine,
+  RiHandCoinLine,
+  RiSwap2Line,
+  RiUserCommunityLine,
 } from "@remixicon/react"
 import { Badge } from "../Badge"
 import CodeExampleTabs from "./CodeExampleTabs"
@@ -58,28 +58,28 @@ const code2 = `async function fetchCustomerOrders() {
 
 const features = [
   {
-    name: "Use Database with your stack",
+    name: "Dividí gastos fácilmente",
     description:
-      "We offer client and server libraries in everything from React and Ruby to iOS.",
-    icon: RiStackLine,
+      "La app hace la matemática por vos y te dice quién debe qué (adiós peleas con tus amigos). 🤝",
+    icon: RiSwap2Line,
   },
   {
-    name: "Try plug & play options",
+    name: "Pagos sin olvidos",
     description:
-      "Customize and deploy data infrastructure directly from the Database Dashboard.",
-    icon: RiPlugLine,
+      "Configurá recordatorios o pagos automáticos y recibí alertas antes de que te atrases. ⏰",
+    icon: RiHandCoinLine,
   },
   {
-    name: "Explore pre-built integrations",
+    name: "Grupos de gastos",
     description:
-      "Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.",
-    icon: RiLinksLine,
+      "Armá “workspaces” o grupos para cada amigo, viaje o proyecto. ✈️",
+    icon: RiUserCommunityLine,
   },
   {
-    name: "Security & privacy",
+    name: "Multi-divisa",
     description:
-      "Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
-    icon: RiShieldKeyholeLine,
+      "¿Pesos, dólares, euros? La app soporta todo y te muestra cuánto gastaste en cada moneda. 🤩",
+    icon: RiExchangeDollarLine,
   },
 ]
 
@@ -89,16 +89,16 @@ export default function CodeExample() {
       aria-labelledby="code-example-title"
       className="mx-auto mt-28 w-full max-w-6xl px-3"
     >
-      <Badge>Developer-first</Badge>
+      <Badge>Por qué usar Split Bloom</Badge>
       <h2
         id="code-example-title"
         className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
       >
-        Built by developers, <br /> for developers
+        Diseñada para hacerte la vida más fácil
       </h2>
       <p className="mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-        Rich and expressive query language that allows you to filter and sort by
-        any field, no matter how nested it may be.
+        Split Bloom te ofrece todas las herramientas que necesitás para manejar
+        tu plata de forma inteligente y sin complicaciones.
       </p>
       <CodeExampleTabs
         tab1={
@@ -119,10 +119,10 @@ export default function CodeExample() {
             key={item.name}
             className="col-span-full sm:col-span-2 lg:col-span-1"
           >
-            <div className="w-fit rounded-lg p-2 shadow-md shadow-indigo-400/30 ring-1 ring-black/5 dark:shadow-indigo-600/30 dark:ring-white/5">
+            <div className="w-fit rounded-lg p-2 shadow-md shadow-green-400/30 ring-1 ring-black/5 dark:shadow-green-600/30 dark:ring-white/5">
               <item.icon
                 aria-hidden="true"
-                className="size-6 text-indigo-600 dark:text-indigo-400"
+                className="size-6 text-green-600 dark:text-green-400"
               />
             </div>
             <dt className="mt-6 font-semibold text-gray-900 dark:text-gray-50">
