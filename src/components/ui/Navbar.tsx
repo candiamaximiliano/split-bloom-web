@@ -59,11 +59,22 @@ export function Navigation() {
               </Link>
             </div>
           </nav>
-          <Button className="hidden h-10 font-semibold md:flex">
+          <Button
+            className="hidden h-10 font-semibold md:flex"
+            onClick={() =>
+              (window.location.href = process.env.NEXT_PUBLIC_AUTH_URL || "")
+            }
+          >
             Iniciar sesión
           </Button>
           <div className="flex gap-x-2 md:hidden">
-            <Button>Iniciar sesión</Button>
+            <Button
+              onClick={() =>
+                (window.location.href = process.env.NEXT_PUBLIC_AUTH_URL || "")
+              }
+            >
+              Iniciar sesión
+            </Button>
             <Button
               onClick={() => setOpen(!open)}
               variant="light"
