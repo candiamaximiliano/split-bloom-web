@@ -3,7 +3,7 @@ export const siteConfig = {
   description:
     "La app que te ayuda a controlar tus gastos, dividir cuentas con amigos, registrar ingresos y evitar sorpresas a fin de mes. Todo sin complicaciones.",
   url: "https://splitbloom.com",
-  ogImage: "https://splitbloom.com/og.jpg",
+  ogImage: "https://splitbloom.com/opengraph-split-bloom.png",
   links: {
     twitter: "https://twitter.com/splitbloom",
     instagram: "https://instagram.com/splitbloom",
