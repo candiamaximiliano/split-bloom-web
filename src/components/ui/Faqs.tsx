@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../Accordion"
+import FAQSchema from "./FAQSchema"
 
 const faqs = [
   {
@@ -36,7 +37,9 @@ const faqs = [
 
 export function Faqs() {
   return (
-    <section className="mt-20 sm:mt-36" aria-labelledby="faq-title">
+    <>
+      <FAQSchema faqs={faqs} />
+      <section className="mt-20 sm:mt-36" aria-labelledby="faq-title">
       <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-14">
         <div className="col-span-full sm:col-span-5">
           <h2
@@ -75,5 +78,6 @@ export function Faqs() {
         </div>
       </div>
     </section>
+    </>
   )
 }

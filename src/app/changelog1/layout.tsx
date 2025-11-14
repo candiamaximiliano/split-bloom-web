@@ -1,4 +1,39 @@
+import type { Metadata } from "next"
 import Balancer from "react-wrap-balancer"
+import { siteConfig } from "../siteConfig"
+
+export const metadata: Metadata = {
+  title: "Changelog - Split Bloom",
+  description:
+    "Mantente informado sobre las últimas adiciones y mejoras que hemos hecho a Split Bloom. Descubrí nuevas funcionalidades y actualizaciones.",
+  openGraph: {
+    title: "Changelog - Split Bloom",
+    description:
+      "Mantente informado sobre las últimas adiciones y mejoras que hemos hecho a Split Bloom.",
+    url: `${siteConfig.url}/changelog1`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Split Bloom - Changelog",
+      },
+    ],
+    locale: "es_AR",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Changelog - Split Bloom",
+    description:
+      "Mantente informado sobre las últimas adiciones y mejoras que hemos hecho a Split Bloom.",
+    images: [siteConfig.ogImage],
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/changelog1`,
+  },
+}
 
 export default function Layout({
   children,

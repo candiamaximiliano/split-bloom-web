@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/Footer"
 import { Navigation } from "@/components/ui/Navbar"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { ThemeProvider } from "next-themes"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -167,6 +168,55 @@ export default function RootLayout({
           <Navigation />
           <main className="px-4 sm:px-6 md:px-8 lg:px-12">{children}</main>
           <Footer />
+          <Script
+            id="organization-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Split Bloom",
+                url: siteConfig.url,
+                logo: `${siteConfig.url}/images/SplitBloomLogo.png`,
+                description: siteConfig.description,
+                sameAs: [
+                  siteConfig.links.twitter,
+                  siteConfig.links.instagram,
+                  siteConfig.links.tiktok,
+                ],
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "customer support",
+                  availableLanguage: "Spanish",
+                },
+              }),
+            }}
+          />
+          <Script
+            id="software-application-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                name: "Split Bloom",
+                applicationCategory: "FinanceApplication",
+                operatingSystem: "Android, iOS, Web",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "4.8",
+                  ratingCount: "50000",
+                },
+                description: siteConfig.description,
+                url: siteConfig.url,
+              }),
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>
